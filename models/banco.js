@@ -1,5 +1,5 @@
-var express = require('express');
-var modulo = {};
+var mongo = require('mongosse')
+
 
 var Schemamodulo =  {
     id: {

@@ -32,9 +32,11 @@ table{
   background-color: green;
   color:white;
   border-width: 0;
+  margin: 2rem;
+  padding: 1rem;
 }
 thead{
-  background-color: blue;
+  background-color: #0a53fd82;
   display: block;
   margin:0;
 }

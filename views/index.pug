@@ -2,15 +2,16 @@ extends layout
 
 block content
   h1.titulo Administrador de Bancos
-  .campos
+  form.campos(action="/api/banco", method="post")
     input#campo1(type="text", name="campo1" placeholder="Nombre")
     input#campo2(type="text", name="campo2" placeholder="Cadena Mundial")
     input#campo3(type="text", name="campo3" placeholder="Años")
-    input.btn(type="button", value="Guardar", href="") 
+    button.btn(type="submit")
+      span Guardar    
   table 
     thead
-      tr
-        th id
+      tr(class="row")
+        th() id
         th Nombre
         th Cadena Mundial
         th Años
