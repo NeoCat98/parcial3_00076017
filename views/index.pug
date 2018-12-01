@@ -1,20 +1,19 @@
 extends layout
 
 block content
-  h1 Administrador de Bancos
+  h1.titulo Administrador de Bancos
   .campos
-    input#campo1(type="text", name="campo1")
-    input#campo2(type="text", name="campo2")
-    input#campo3(type="text", name="campo3")
-    input#campo4(type="text", name="campo4")
-    a(href="") Guardar
+    input#campo1(type="text", name="campo1" placeholder="Nombre")
+    input#campo2(type="text", name="campo2" placeholder="Cadena Mundial")
+    input#campo3(type="text", name="campo3" placeholder="Años")
+    input.btn(type="button", value="Guardar", href="") 
   table 
     thead
-      th id
-      th Nombre
-      th Cadena Mundial
-      th Años
-      th Opcion Eliminar
-      th Opcion Modificar 
+      tr
+        th id
+        th Nombre
+        th Cadena Mundial
+        th Años
+        th Opciones
     tbody.datos
 

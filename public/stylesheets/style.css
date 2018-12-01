@@ -1,8 +1,43 @@
 body {
-  padding: 50px;
+  margin-top:0;
+  margin-left: 10%;
+  margin-right: 10%;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+.titulo{
+  background-color: burlywood;
+  padding: 1rem;
+  margin: 0;
+
+}
+.campos{
+  background-color: grey;
+  padding: 1rem;
+  margin:0;
+}
+
+input {
+  margin: 2rem;
+  padding: 1rem;
+}
+table{
+  border-spacing: 0;
+}
+.btn{
+  background-color: green;
+  color:white;
+  border-width: 0;
+}
+thead{
+  background-color: blue;
+  display: block;
+  margin:0;
+}
+th{
+  padding: 1rem 5rem;
 }

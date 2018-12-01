@@ -1,16 +1,16 @@
 var express = require('express');
 var modulo = {};
 
-var Schemamodulo = new Schema{
+var Schemamodulo =  {
     id: {
         type: String,
 
     },
     nombre: String,
     cadena: String,
-    annio: date
+    annio: String
 }
 
 
 
-exports.modulo = modulo;
+module.exports = Schemamodulo;
