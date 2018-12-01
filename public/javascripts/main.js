@@ -6,7 +6,7 @@ var app ={
         this.mostrarBanco();
     },
     mostrarBanco: function(){
-        fetch('/api/Banco',
+        fetch('/api/Bancos',
         ).then(res => res.json)
             .then(data=>data.json)
                 var tbody = document.getElementById("datos");
@@ -36,7 +36,7 @@ var app ={
                 }
     },
     eliminardato: function(event,data,tr,tbody){
-        fetch('/api/Banco'+data.id,
+        fetch('/api/Bancos'+data.id,
         ).then(res => res.json)
             .then(data=>data.json)
             tbody.removeChild(tr);
@@ -45,7 +45,7 @@ var app ={
     },
     actualizardato: function(event,data,tr,tbody){
         var tr2 = document.createElement("tr");
-        tr2.innerHTML = `<form action="/api/Banco/${data.id}">
+        tr2.innerHTML = `<form action="/api/Bancos/${data.id}">
                         <td>
                             <input type="text" name="id" placeholder="id" disabled>
                         </td>
@@ -59,12 +59,12 @@ var app ={
                             <input type="text" name="id" placeholder="Años" name="annios">
                         </td>
                         <td>
-                        <button class="aceptar"> <i class="far fa-check-circle"></i> </button>
+                        <button class="aceptar" type="submit"> <i class="far fa-check-circle"></i> </button>
                         <a class="cancelar"> <i class="fas fa-ban"></i> </a>
                         </td>`;
         
         tr2.addEventListener(".aceptar",function(event){
-            
+                
         });
 
     }

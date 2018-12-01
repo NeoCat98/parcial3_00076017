@@ -8,7 +8,7 @@ controlador.guardar = function(req,res){
         cadena: req.body.campo2,
         annio: req.body.campo3
     }
-    moduloBanco.save({data},function(err){
+    moduloBanco.save(data,function(err){
         if(err){
             status(500);
             res.json({
