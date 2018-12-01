@@ -2,19 +2,24 @@ extends layout
 
 block content
   h1.titulo Administrador de Bancos
-  form.campos(action="/api/banco", method="post")
-    input#campo1(type="text", name="campo1" placeholder="Nombre")
-    input#campo2(type="text", name="campo2" placeholder="Cadena Mundial")
-    input#campo3(type="text", name="campo3" placeholder="Años")
-    button.btn(type="submit")
-      span Guardar    
-  table 
-    thead
-      tr(class="row")
-        th() id
-        th Nombre
-        th Cadena Mundial
-        th Años
-        th Opciones
+  form(action="/api/banco", method="post" )
+    div(class="row campos" style="margin:0;")
+      div(class="col s3")
+        input(type="text", name="campo1" placeholder="Nombre")
+      div(class="col s3")
+        input(type="text", name="campo2" placeholder="Cadena Mundial")
+      div(class="col s3")
+        input(type="text", name="campo3" placeholder="Años")
+      div(class="col s3")
+        button.btn(type="submit")
+          span Guardar    
+  table(class="striped")
+    thead(style="background-color: #0a53fd82;")
+      tr
+        th(style="border-radius: 0px;") id
+        th(style="border-radius: 0px;") Nombre
+        th(style="border-radius: 0px;") Cadena Mundial
+        th(style="border-radius: 0px;") Años
+        th(style="border-radius: 0px;") Opciones
     tbody.datos
 

@@ -25,9 +25,6 @@ input {
   margin: 2rem;
   padding: 1rem;
 }
-table{
-  border-spacing: 0;
-}
 .btn{
   background-color: green;
   color:white;
@@ -35,11 +32,6 @@ table{
   margin: 2rem;
   padding: 1rem;
 }
-thead{
-  background-color: #0a53fd82;
-  display: block;
-  margin:0;
-}
 th{
-  padding: 1rem 5rem;
+  border-radius: 0px;
 }
