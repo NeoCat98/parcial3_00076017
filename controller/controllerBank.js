@@ -8,7 +8,7 @@ controlador.guardar = function(req,res){
         cadena: req.body.campo2,
         annio: req.body.campo3
     }
-    moduloBanco.create({data},function(err){
+    moduloBanco.save({data},function(err){
         if(err){
             status(500);
             res.json({
@@ -37,6 +37,62 @@ controlador.mostrar = function(req,res){
             res.json({
                 status: ok
             })
+        }
+    })
+}
+
+controlador.mostraruno = function(req,res){
+    moduloBanco.findOne({_id: req.params.id},function(req,res,err){
+        if(err){
+            status(500);
+            res.json({
+                status: 500,
+                err
+            })
+        }
+        else{
+            res.json({
+                status: ok
+            })
+        }
+    })
+}
+
+controlador.modificar = function(req,res){
+    update = {
+        nombre: req.body.nombre,
+        cadena: req.body.cadena,
+        annios: req.body.annios,
+    }
+    moduloBanco.findByIdAndUpdate(req.params.id,update,function(req,res,err){
+        if(err){
+            status(500);
+            res.json({
+                status:500,
+                err
+            });
+        }
+        else{
+            res.json({
+                status: ok
+            });
+        }
+    })
+}
+
+controlador.eliminar = function(req,res){
+    moduloBanco.findByIdAndRemove(req.params.id,function(req,res,err){
+        if(err){
+            status(500);
+            res.json({
+                status:500,
+                err
+            });
+        }
+        else{
+            res.json({
+                status: ok
+            });
         }
     })
 }
