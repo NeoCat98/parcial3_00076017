@@ -1,10 +1,10 @@
+var mongo = require('mongoose')
+var bancoModelo = mongo.Schema();
 
-
-
-var Schemamodulo =  {
+bancoModelo = {
     id: {
         type: String,
-
+        unique
     },
     nombre: String,
     cadena: String,
@@ -12,5 +12,4 @@ var Schemamodulo =  {
 }
 
 
-
-module.exports = Schemamodulo;
+module.exports = modelo;

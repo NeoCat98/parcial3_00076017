@@ -14,7 +14,7 @@ router.post('/',function(req,res,err){
         }
         else{
             res.json({
-                
+                status: ok
             })
         }
     })
@@ -32,7 +32,7 @@ router.get('/',function(req,res){
         }
         else{
             res.json({
-                
+                status: ok
             })
         }
     })
@@ -49,7 +49,7 @@ router.get('/:id',function(req,res){
         }
         else{
             res.json({
-                
+                status: ok
             })
         }
     })
@@ -72,8 +72,7 @@ router.put('/:id',function(req,res){
         }
         else{
             res.json({
-                status:500,
-                err
+                status: ok
             });
         }
     })
@@ -91,8 +90,7 @@ router.delete('/:id',function(req,res){
         }
         else{
             res.json({
-                status:500,
-                err
+                status: ok
             });
         }
     })
