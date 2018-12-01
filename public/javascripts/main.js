@@ -5,7 +5,10 @@ var app ={
     init: function(){
 
     },
-    mostartBanco: function(){
+    mostrarUnDato: function(){
+        
+    },
+    mostrarBanco: function(){
         fetch('/api/Banco',
         ).then(res => res.json)
             .then(data=>data.json)
@@ -32,7 +35,18 @@ var app ={
                     tr.addEventListener(".update",function(event){
                         actualizardato(event, data , tr. tbody);
                     });
-                    
+                    tbody.appendChild(tr);
                 }
+    },
+    eliminardato: function(event,data,tr,tbody){
+        fetch('/api/Banco'+data.id,
+        ).then(res => res.json)
+            .then(data=>data.json)
+            tbody.removeChild(tr);
+            
+            
+    },
+    actualizardato: function(event,data,tr,tbody){
+
     }
 }

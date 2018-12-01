@@ -9,6 +9,10 @@ a {
   color: #00B7FF;
 }
 
+h1{
+  font-size: 2rem;
+}
+
 .titulo{
   background-color: burlywood;
   padding: 1rem;
