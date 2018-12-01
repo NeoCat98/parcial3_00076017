@@ -1,11 +1,13 @@
-var mongo = require('mongoose')
-var bancoModelo = mongo.Schema();
+var express = require('express'); 
+var mongo = require('mongoose');
+var bancoModelo = mongo.Schema;
 
-bancoModelo = {
+
+var banco = new bancoModelo({
     nombre: String,
     cadena: String,
     annio: String
-}
+});
 
 
-module.exports = bancoModelo;
+module.exports = banco;

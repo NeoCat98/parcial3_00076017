@@ -1,42 +1,12 @@
 var express = require('express');
 var router = express.Router();
 var moduloBanco = require('../models/banco');
-
+var controladorBank = require('../controller/controllerBank')
 //Agregar
-router.post('/',function(req,res,err){
-    moduloBanco.save({},function(req,res,err){
-        if(err){
-            status(500);
-            res.json({
-                status: 500,
-                err
-            })
-        }
-        else{
-            res.json({
-                status: ok
-            })
-        }
-    })
-});
+router.post('/',controladorBank.guardar);
 
 //Mostrar
-router.get('/',function(req,res){
-    moduloBanco.find({},function(req,res,err){
-        if(err){
-            status(500);
-            res.json({
-                status: 500,
-                err
-            })
-        }
-        else{
-            res.json({
-                status: ok
-            })
-        }
-    })
-});
+router.get('/',controladorBank.mostrar);
 
 router.get('/:id',function(req,res){
     moduloBanco.findOne({_id: req.params.id},function(req,res,err){
