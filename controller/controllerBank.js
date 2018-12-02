@@ -25,7 +25,7 @@ controlador.guardar = function(req,res){
 }
 
 controlador.mostrar = function(req,res){
-    oduloBanco.find({},function(req,res,err){
+    moduloBanco.find({},function(req,res,err){
         if(err){
             status(500);
             res.json({

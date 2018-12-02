@@ -62,10 +62,6 @@ var app ={
                         <button class="aceptar" type="submit"> <i class="far fa-check-circle"></i> </button>
                         <a class="cancelar"> <i class="fas fa-ban"></i> </a>
                         </td>`;
-        
-        tr2.addEventListener(".aceptar",function(event){
-                
-        });
 
     }
 }
